@@ -6,23 +6,23 @@ const productSchema = new mongoose.Schema(
       type: String,
       required: [true, "product name must be provided"],
       unique: [true, "product name must be unique"],
-      minlength:8,
+      minlength: 8,
     },
     price: {
       type: Number,
       required: [true, "product price must be provided"],
-      min:1
+      min: 1,
     },
     rating: {
       type: Number,
       default: 0.0,
-      min:0.0,
-      max:5.0,
+      min: 0.0,
+      max: 5.0,
     },
     productImg: {
       type: String,
       default:
-        "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3VpdGFyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png",
     },
     category: {
       type: String,
