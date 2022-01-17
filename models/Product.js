@@ -27,7 +27,7 @@ const productSchema = new mongoose.Schema(
     category: {
       type: String,
       enum: {
-        values: ["Electric Guitar", "Acoustic Steel", "Classical Guitar"],
+        values: ["Electric", "Acoustic", "Classical"],
         message: "{VALUE} is not supported",
       },
     },
