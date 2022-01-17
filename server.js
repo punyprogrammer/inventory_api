@@ -4,6 +4,7 @@ const morgan = require("morgan");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/errorHandler");
 const notFound = require("./middleware/notFound");
+const cors=require("cors")
 
 //Load env variables
 dotenv.config({ path: "./config/config.env" });
@@ -13,6 +14,8 @@ connectDB();
 //import route files
 const productRoutes = require("./routes/products");
 const app = express();
+//add cors
+app.use(cors());
 //body parser
 app.use(express.json());
 //Dev Logging middleware
