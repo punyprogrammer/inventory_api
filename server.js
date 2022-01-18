@@ -4,7 +4,7 @@ const morgan = require("morgan");
 const connectDB = require("./config/db");
 const errorHandler = require("./middleware/errorHandler");
 const notFound = require("./middleware/notFound");
-const cors=require("cors")
+const cors = require("cors");
 
 //Load env variables
 dotenv.config({ path: "./config/config.env" });
@@ -13,6 +13,7 @@ dotenv.config({ path: "./config/config.env" });
 connectDB();
 //import route files
 const productRoutes = require("./routes/products");
+const brandRoutes = require("./routes/brands");
 const app = express();
 //add cors
 app.use(cors());
@@ -25,6 +26,7 @@ if (process.env.NODE_ENV === "development") {
 
 //mount the routes
 app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/brands", brandRoutes);
 app.get("/", (req, res) => {
   res.send(
     '<h1>Welcome to Products API</h1> <h4>Check the documentation below</h4><a href="https://github.com/punyprogrammer/inventory_api">Documentation</a>'

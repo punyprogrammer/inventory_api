@@ -7,6 +7,7 @@ const productSchema = new mongoose.Schema(
       required: [true, "product name must be provided"],
       unique: [true, "product name must be unique"],
       minlength: 8,
+      trim: true,
     },
     price: {
       type: Number,
@@ -23,6 +24,7 @@ const productSchema = new mongoose.Schema(
       type: String,
       default:
         "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png",
+      trim: true,
     },
     category: {
       type: String,
@@ -30,11 +32,13 @@ const productSchema = new mongoose.Schema(
         values: ["Electric", "Acoustic", "Classical"],
         message: "{VALUE} is not supported",
       },
+      trim: true,
     },
 
     brand: {
       type: String,
       required: [true, "product brand must be provided"],
+      trim: true,
     },
     quantity: {
       type: Number,

@@ -5,15 +5,14 @@ const asyncHandler = require("../middleware/asyncHandler");
 //@route GET /api/v1/bootcamps
 //access  Public
 exports.getProducts = asyncHandler(async (req, res, next) => {
-  const { category, sortedBy,brand } = req.query;
+  const { category, sortedBy, brand } = req.query;
   const queryObject = {};
   let result;
   if (category) {
     queryObject.category = category;
   }
-  if(brand)
-  {
-    queryObject.brand=brand;
+  if (brand) {
+    queryObject.brand = brand;
   }
   result = Product.find(queryObject);
   if (sortedBy) {
@@ -75,3 +74,4 @@ exports.deleteProduct = asyncHandler(async (req, res, next) => {
   }
   res.status(200).json({ success: true, deletedData: bootcamp });
 });
+//Route to get all brands in the database
