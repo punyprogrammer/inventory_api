@@ -29,7 +29,7 @@ app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/brands", brandRoutes);
 app.get("/", (req, res) => {
   res.send(
-    '<h1>Welcome to Products API</h1> <h4>Check the documentation below</h4><a href="https://github.com/punyprogrammer/inventory_api">Documentation</a>'
+    '<h1>Welcome to Guitar Inventory  API</h1> <h4>Check the documentation below</h4><a href="https://github.com/punyprogrammer/inventory_api">Documentation</a>'
   );
 });
 
