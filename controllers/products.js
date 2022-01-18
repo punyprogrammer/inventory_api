@@ -41,6 +41,10 @@ exports.getProduct = async (req, res, next) => {
 //@route POST /api/v1/bootcamps
 //access  Private
 exports.createProduct = asyncHandler(async (req, res, next) => {
+   if(!req.body.productImg)
+   {
+       req.body.productImg="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/832px-No-Image-Placeholder.svg.png"
+   }
   const bootcamp = await Product.create(req.body);
   res.status(201).json({
     success: true,
