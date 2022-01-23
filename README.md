@@ -4,4 +4,4 @@
 ## GET ROUTES
 ### 1) Get All Products in the Inventory:  `GET :{baseUrl}/api/v1/products`
 ####   a) Response -200 OK
-#####  Response format: ` {  success:true,nbHits:{no of data points fetched},data:array_of_data_points`
+#####  Response format: ` {  success:true,nbHits:{no of data points fetched},data:array_of_data_points} `
