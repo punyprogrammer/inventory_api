@@ -6,9 +6,9 @@
 ####   a) Response -200 OK
 #####  Response format: ` {  success:true,nbHits:{no of data points fetched},data:array_of_data_points} `
 #####  Additional_params: 
-##### * sortedBy={fieldName} :Get the products in ascending order  of the given field
-##### * sortedBy=-{fieldName}:Get the products in descending order of the given field
-##### * category={fieldValue}:Filter the products with category=={fieldValue}
+##### *sortedBy={fieldName} :Get the products in ascending order  of the given field
+##### *sortedBy=-{fieldName}:Get the products in descending order of the given field
+##### *category={fieldValue}:Filter the products with category=={fieldValue}
 #####                       Allowed categories:1)Acoustic 2)Electric 3)Classical
-##### * brand={fieldValue} :Filter the products with the given brands
+##### *brand={fieldValue} :Filter the products with the given brands
 #####                    :To get the list of all brands hit:`GET: {baseUrl}/api/v1/brands`
